@@ -1,0 +1,2 @@
+# tests-JS-selenium
+autotests
