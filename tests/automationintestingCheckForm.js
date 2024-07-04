@@ -1,7 +1,8 @@
 const { Builder, Browser, By, Key, until } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 
 (async function checkForm() {
-  let driver = await new Builder().forBrowser(Browser.CHROME).build()
+  let driver = await new Builder().forBrowser('chrome').build()
   try {
     await driver.get('https://automationintesting.online/');
     const name = await driver.wait(until.elementLocated(By.id('name')), 10000);
@@ -24,6 +25,8 @@ const { Builder, Browser, By, Key, until } = require('selenium-webdriver');
     await subject.sendKeys(subjectValue);
     await message.sendKeys(messageValue);
     await driver.actions().click(submitContact).perform();
+
+    await driver.sleep(10000);
 
   } catch (error) {
     console.error('Ошибка', error);

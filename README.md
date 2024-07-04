@@ -1,2 +1,1 @@
 # tests-JS-selenium
-autotests

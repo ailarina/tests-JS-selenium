@@ -11,9 +11,10 @@
   "dependencies": {
     "selenium-webdriver": "^4.21.0"
   },
+  "mocha": "^10.4.0",
   "directories": {
     "test": "tests"
   },
-  "devDependencies": {},
-  "description": ""
+  "description": "autotests",
+  "devDependencies": {}
 }
